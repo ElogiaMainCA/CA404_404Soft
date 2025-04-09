@@ -1,4 +1,6 @@
-# Errores 404 y Soft 404: Qué son, por qué ocurren y cómo corregirlos
+# Reporte Técnico de Errores 404 y Soft 404
+#Contexto General: ¿Qué son, por qué ocurren y cómo corregirlos?
+
 # 1. Error 404 (Página no encontrada)
 
 ## Qué es: Este error ocurre cuando un usuario intenta acceder a una página que no existe. El servidor responde con el código 404, lo que indica que la página no se encuentra.
@@ -53,12 +55,13 @@ Asegúrate de que las redirecciones estén configuradas adecuadamente para envia
 
 Revisa que las redirecciones no lleven a páginas de error o contenido irrelevante.
 
-En resumen:
-Errores 404: Páginas que no existen. Corrige con redirecciones 301.
 
-Soft 404: Páginas que devuelven un código 200 pero tienen contenido de error. Corrige mostrando un código 404 real.
 
-Redirecciones 300: Páginas redirigidas a otras. Asegúrate de que las redirecciones estén bien configuradas y dirijan a contenido relevante.
+
+
+
+
+
 
 
 # Auditoría de Errores 404 y Soft 404 - C&A (www.cyamoda.com)
