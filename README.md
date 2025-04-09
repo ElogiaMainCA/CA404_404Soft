@@ -103,6 +103,54 @@ También encontramos varios casos de **soft 404**, donde las páginas devuelven 
 
 ---
 
+### Acciones emprendidas
+Realizamos un match entre las URLs con errores 404 y 404 soft de Search Console vs URLs con errores desplegados a raíz de un crawl en Screaming Frog por Metodo List Mode, para analizar específicamente la lista que despliega Search Console y se encontraron datos interesantes. 
+
+# Errores 404 GSC vs Screaming Frog
+Resumen del análisis en Screaming Frog:
+
+Total URLs auditadas: 1,000
+
+Redirecciones (3xx): 258 → ⚠️ Estas URLs terminan en una página 404, lo que indica una redirección rota o mal configurada.
+
+Errores 404 directos (4xx): 741 → Estas URLs no existen o ya están caídas, y están indexadas o enlazadas aún.
+
+Completadas (200): 1 sola... lo cual confirma que la mayoría ya no llevan a ningún lado útil.
+
+![image](https://github.com/user-attachments/assets/bade13a9-e56b-4925-be27-a4fd5d0d9d58)
+
+Detalle de URLs: https://docs.google.com/spreadsheets/d/10dwomwzu4VMZvZ1zUUynnpt1ND4eB2V8/edit?usp=sharing&ouid=113874886446922366610&rtpof=true&sd=true
+
+
+# Errores 404 Soft GSC vs Screaming Frog
+
+Interpretación profesional
+
+2XX - Páginas que devuelven código 200
+Estas son páginas que técnicamente devuelven "éxito", pero Google las clasificó como Soft 404 porque:
+
+El contenido es muy pobre o inexistente.
+
+Devuelven un mensaje como “página no encontrada” pero sin código 404 real.
+
+Están vacías o mal estructuradas.
+
+Acción recomendada: Corregir estas páginas asegurando contenido útil, o devolver un verdadero 404 si ya no deben existir.
+
+3XX - Redirecciones
+Casi 950 páginas redirigen, lo cual no siempre es una solución adecuada si:
+
+Redirigen todas a una misma URL genérica (por ejemplo, home o una categoría), algo que Google interpreta como Soft 404.
+
+No tienen una relación semántica real con el destino.
+
+Acción recomendada: Asegurarse de que cada redirección 301 apunte a una página relevante y útil para el usuario. De lo contrario, es mejor devolver un 404 real.
+
+![image](https://github.com/user-attachments/assets/1e0800b7-8132-4ef2-9120-4c162c646e72)
+
+Detalle de URLs: https://docs.google.com/spreadsheets/d/1GNhvUleCNINbnF6yCPPyUFTzDPVaR3l1/edit?usp=sharing&ouid=113874886446922366610&rtpof=true&sd=true 
+
+
 ## 4. Acciones recomendadas para Resolver los Errores 404 y Soft 404
 
 ### Redirección 301 de Páginas Eliminadas:
