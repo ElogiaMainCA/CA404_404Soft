@@ -255,3 +255,37 @@ Puedes hacerlo agregando el siguiente código en el <head> de tu página 404:
 
 
 <meta name="robots" content="noindex, nofollow">
+
+
+# ¿LAS URLs SE ENCUENTRAN EN LOS SITEMAPS?
+
+## Se realizó una revisión en los sitemaps, con base a las URLs con 404 y 404 soft extraidas, pero no se encontraron dentro de los sitemaps.
+
+![image](https://github.com/user-attachments/assets/62f3c4e5-81cc-4c64-ae2f-9e7a19a59872)
+
+![image](https://github.com/user-attachments/assets/141da025-349a-4675-b775-863762c2fd0c)
+
+# URLs 404 / 404 Soft no están en el sitemap, pero sí aparecen en Search Console y en auditorías
+
+## ¿Qué significa esto?
+No están en el sitemap - el sitio no las está proponiendo activamente para indexación.
+
+Sí están en Search Console - Google ya las conoce y las tiene en su índice o las está rastreando (por enlaces internos, backlinks, o antiguos sitemaps).
+
+Sí aparecen en tus auditorías - aún existen enlaces (internos o externos) hacia esas URLs o el servidor sigue sirviendo algo ahí (como en los soft 404).
+
+## ¿Qué hacer para solucionar este problema?
+
+1. Ver si tienen enlaces internos
+
+Si las estás enlazando internamente, se tiene que corregir urgentemente.
+
+2. Ver si tienen backlinks externos
+
+Si tienen valor, redirigí a una página similar (301).
+
+Si no, dejalas 404 reales (no soft) y eliminar de sitios desde donde estan enlazando.
+
+3. Estas páginas deben responder con 404 real
+Los soft 404 deben convertirse en 404/410 verdaderos o redirigir a una página equivalente, si la hay. 
+
