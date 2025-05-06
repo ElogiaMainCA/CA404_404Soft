@@ -257,7 +257,7 @@ Puedes hacerlo agregando el siguiente código en el <head> de tu página 404:
 <meta name="robots" content="noindex, nofollow">
 
 
-# ¿LAS URLs SE ENCUENTRAN EN LOS SITEMAPS?
+# ¿LAS URLs SE ENCUENTRAN EN LOS SITEMAPS?  (Entregable 21 de Abril)
 
 ## Se realizó una revisión en los sitemaps, con base a las URLs con 404 y 404 soft extraidas, pero no se encontraron dentro de los sitemaps.
 
@@ -274,18 +274,53 @@ Sí están en Search Console - Google ya las conoce y las tiene en su índice o 
 
 Sí aparecen en tus auditorías - aún existen enlaces (internos o externos) hacia esas URLs o el servidor sigue sirviendo algo ahí (como en los soft 404).
 
+
+# Enviar a SEO solicitud del bloqueo para SITEMAP (Entregable 28 de abril)
+
 ## ¿Qué hacer para solucionar este problema?
 
-1. Ver si tienen enlaces internos
+En la mayoría de los casos, no es necesario hacer un bloqueo, el hecho de que no estén en el sitemap ya es correcto: no estás sugiriendo a Google que las rastree o indexe.
 
-Si las estás enlazando internamente, se tiene que corregir urgentemente.
+## 1. Permitir que devuelvan 404 o 404 soft reales
+Esto le dice a Google que esas URLs ya no existen.
 
-2. Ver si tienen backlinks externos
+Google las eliminará del índice en sus próximos rastreos.
 
-Si tienen valor, redirigí a una página similar (301).
+¡Muy importante! De que no sean soft 404 (o sea, que devuelvan realmente un error y no un 200 con página vacía o plantilla genérica).
 
-Si no, dejalas 404 reales (no soft) y eliminar de sitios desde donde estan enlazando.
+## 2. Eliminar enlaces internos hacia esas URLs
+Si el sitio sigue enlazando a esas páginas, Google y los usuarios las seguirán encontrando.
 
-3. Estas páginas deben responder con 404 real
-Los soft 404 deben convertirse en 404/410 verdaderos o redirigir a una página equivalente, si la hay. 
+Esto también puede estar causando que aparezcan en tus auditorías y Search Console.
+
+Solución: limpiar o actualizar los enlaces internos (por ejemplo, productos descatalogados, enlaces de menú, filtros, etc.).
+
+## 3. Revisar backlinks (si los hay)
+Si hay enlaces externos que apuntan a esas URLs, considera redirigirlas con 301 a una página equivalente (si aplica), para conservar el valor del backlink.
+
+Si no hay equivalente y no son importantes, dejá el 404 real.
+
+Recordemos que estos puntos y acciones ya se abordaron en las recomendaciones hechas en las entregas ateriores.
+
+## 4. No agregarlas al robots.txt
+Bloquear por robots.txt no sirve para errores 404 o soft 404. 
+
+Google no podrá confirmar que son errores si están bloqueadas, y podrían quedar en el índice más tiempo.
+
+
+
+
+
+
+
+
+# ¿ES NECESARIO HACER AJUSTE EN ROBOTS.TXT? (Entregable 5 de Mayo)
+
+## Google ya las conoce: Si la URL ya está en Search Console o ha sido rastreada, bloquearla por robots.txt no la elimina del índice. Al contrario: impide que Google la reevalúe y note que ya no existe.
+
+No ayuda al SEO: El robots.txt solo evita el rastreo, no la indexación si Google ya la tiene en su sistema (especialmente si tiene enlaces entrantes).
+
+No permite ver el código de estado: Al bloquear por robots.txt, Google no puede ver el 404 o 410, y por lo tanto, podría mantener la URL en su índice durante más tiempo.
+
+
 
